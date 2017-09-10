@@ -18,3 +18,26 @@
 .ui-view-placeholder {
     margin-top: 60px;
 }
+
+
+.NameField, .EmailField, .MobileField, .DishField {
+    background: transparent;
+    border: none;
+}
+
+.Newsletter, .submit {
+    text-align: center;
+    background: transparent;
+}
+
+.errorMessage {
+    padding-left: 20px;
+}
+
+.FormContainer {
+    padding-top: 50px;
+}
+
+.signUpFormStyle {
+    text-align: center;
+}

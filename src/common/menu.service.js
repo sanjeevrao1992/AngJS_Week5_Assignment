@@ -5,12 +5,12 @@ angular.module('common')
 .service('MenuService', MenuService);
 
 
-MenuService.$inject = ['$http', 'ApiPath'];
-function MenuService($http, ApiPath) {
+MenuService.$inject = ['$https', 'ApiPath'];
+function MenuService($https, ApiPath) {
   var service = this;
 
   service.getCategories = function () {
-    return $http.get(ApiPath + '/categories.json').then(function (response) {
+    return $https.get(ApiPath + '/categories.json').then(function (response) {
       return response.data;
     });
   };
@@ -22,7 +22,7 @@ function MenuService($http, ApiPath) {
       config.params = {'category': category};
     }
 
-    return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
+    return $https.get(ApiPath + '/menu_items.json', config).then(function (response) {
       return response.data;
     });
   };
