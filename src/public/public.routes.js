@@ -46,6 +46,18 @@ function routeConfig ($stateProvider) {
     	templateUrl: 'src/public/signUp/signUp.html',
     	controller: 'signUpController',
     	controllerAs: 'signUpCtrl'
+    })
+    .state('public.submit', {
+      url: '/submit/{favDish}',
+      templateUrl: 'src/public/submit/submit.html',
+      controller: 'submitController',
+      controllerAs: 'submitCtrl',
+      resolve: {
+        savedData : ['$stateParams', 'MenuService', function ($stateParams, MenuService) {
+          return MenuService.Savedata($stateParams.favDish);
+        }]
+      }
     });
+
 }
 })();

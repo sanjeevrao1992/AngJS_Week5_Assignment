@@ -27,6 +27,19 @@ function MenuService($https, ApiPath) {
     });
   };
 
+  service.Savedata = function (short_name) {
+    console.log(short_name);
+    return $https.get(ApiPath + '/menu_items/' + short_name + '.json')
+    .then(function (response) {
+      console.log(response);
+      return response.data;
+    })
+    .then(function (error) {
+      console.log(error);
+      return error.data;
+    });
+  };
+
 }
 
 

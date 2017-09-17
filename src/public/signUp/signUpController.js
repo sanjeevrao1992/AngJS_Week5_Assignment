@@ -9,9 +9,6 @@ function signUpController() {
 	var signUpCtrl = this;
 	console.log("Inside the submit form controller!");
 
-	signUpCtrl.submitForm = function () {
-		console.log("Inside the submit form!");
-	};
 }
 
 })();
